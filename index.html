@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg); background-size: 100% ">
+	<div style="color: white" class="div1">
+		<h1>Враг</h1>
+	</div>
+	<div style="color: white" class="div2">
+		<h1>герой</h1>
+	</div>
+	<script type="text/javascript">
+		let array = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png"]
+		let div1 = document.querySelector(".div1")
+		let div2 = document.querySelector(".div2")
+
+		
+		let ran = function(){
+			let rand = Math.random()*10 //случайное число до 5
+			let round = Math.round(rand)
+			return round
+		}
+		
+
+		let Randomaizer = function(arg){
+			for(let index = 0; index<arg; index = index + 1){//цикл
+				let elem = document.createElement("img")
+				div1.appendChild(elem)
+				elem.style.height = "200px"
+				elem.src = array[ran()];
+			}
+		}
+		let Randomaizer2 = function(arg){
+			for(let index = 0; index<arg; index = index + 1){//цикл
+				let elem = document.createElement("img")
+				div2.appendChild(elem)
+				elem.style.height = "200px"
+				elem.src = array[ran()];
+			}
+		}
+	</script>
+</body>
+</html>
